@@ -1,0 +1,15 @@
+- name: example of tower  intregration with git
+  hosts: all
+  tasks:
+    - name: creat directory 
+      file:
+           path: /tmp/test
+           state: directory
+
+
+
+
+    - name: restart  postfix
+      service:
+            name: postfix
+            state: restarted
